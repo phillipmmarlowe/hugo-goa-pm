@@ -48,6 +48,9 @@ div.content,
 .error p {
   color: #e3c0a0;
 }
+p.meta {
+  color: #e3c0a000 !important;
+}
 
 .category {
   color: #e3c0a0 !important;
