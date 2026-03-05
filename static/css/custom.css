@@ -63,4 +63,25 @@ p.meta {
   color: #d29965 !important;
 }
 
+/* Projects list thumbnails */
+.list-entry-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+img.project-thumb {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: 0 0 auto;
+}
+
+/* Optional: keep long titles from looking weird */
+.project-title {
+  display: inline-block;
+  line-height: 1.2;
+}
+
 /* Add custom CSS here. */

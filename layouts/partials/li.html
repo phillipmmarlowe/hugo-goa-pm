@@ -2,7 +2,12 @@
   <ul class="list-unstyled">
     {{ range .Data.Pages.ByPublishDate.Reverse }}
     <li class="list-entry">
-      <a class="list-entry-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <a class="list-entry-link" href="{{ .RelPermalink }}">
+        {{ with .Params.thumbnail }}
+          <img class="project-thumb" src="{{ . | relURL }}" alt="" loading="lazy" />
+        {{ end }}
+        <span class="project-title">{{ .Title }}</span>
+      </a>
       <p class="meta">
         {{ if not .Date.IsZero }} {{ .Date.Format (default "Jan 2, 2006" .Site.Params.dateformat) | upper }} {{ end }}
         - {{ math.Round (div (countwords .Content) 220.0) }} MIN READ
